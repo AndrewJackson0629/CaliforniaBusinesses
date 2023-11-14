@@ -35,19 +35,19 @@
         <script src="js/tailDT.js"></script>
 <script src="js/nouislider.min.js"></script>
 <script src="js/wNumb.js"></script>
-        <script src="data/USStateBoundaries_0.js"></script>
+        <script src="data/California_0.js"></script>
         <script src="data/CaliforniaBusinessesByEmployeeSize_1.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[28.006679946355785,-134.19016859055392],[44.89499169823394,-93.91715016910993]]);
+        }).fitBounds([[27.918741116109267,-136.52988659526073],[44.82441824094621,-96.25686817381677]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
-        function pop_USStateBoundaries_0(feature, layer) {
+        function pop_California_0(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
@@ -71,44 +71,44 @@
                         <td colspan="2">' + (feature.properties['SQMI'] !== null ? autolinker.link(feature.properties['SQMI'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Shape__Area'] !== null ? autolinker.link(feature.properties['Shape__Area'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Shape__Are'] !== null ? autolinker.link(feature.properties['Shape__Are'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Shape__Length'] !== null ? autolinker.link(feature.properties['Shape__Length'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Shape__Len'] !== null ? autolinker.link(feature.properties['Shape__Len'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_USStateBoundaries_0_0() {
+        function style_California_0_0() {
             return {
-                pane: 'pane_USStateBoundaries_0',
+                pane: 'pane_California_0',
                 opacity: 1,
-                color: 'rgba(110,110,110,1.0)',
+                color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 3.0, 
+                weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(127,219,255,1.0)',
+                fillColor: 'rgba(114,155,111,1.0)',
                 interactive: false,
             }
         }
-        map.createPane('pane_USStateBoundaries_0');
-        map.getPane('pane_USStateBoundaries_0').style.zIndex = 400;
-        map.getPane('pane_USStateBoundaries_0').style['mix-blend-mode'] = 'normal';
-        var layer_USStateBoundaries_0 = new L.geoJson(json_USStateBoundaries_0, {
+        map.createPane('pane_California_0');
+        map.getPane('pane_California_0').style.zIndex = 400;
+        map.getPane('pane_California_0').style['mix-blend-mode'] = 'normal';
+        var layer_California_0 = new L.geoJson(json_California_0, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_USStateBoundaries_0',
-            layerName: 'layer_USStateBoundaries_0',
-            pane: 'pane_USStateBoundaries_0',
-            onEachFeature: pop_USStateBoundaries_0,
-            style: style_USStateBoundaries_0_0,
+            dataVar: 'json_California_0',
+            layerName: 'layer_California_0',
+            pane: 'pane_California_0',
+            onEachFeature: pop_California_0,
+            style: style_California_0_0,
         });
-        bounds_group.addLayer(layer_USStateBoundaries_0);
-        map.addLayer(layer_USStateBoundaries_0);
+        bounds_group.addLayer(layer_California_0);
+        map.addLayer(layer_California_0);
         function pop_CaliforniaBusinessesByEmployeeSize_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -267,7 +267,7 @@
             };
             abstract.addTo(map);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'California Businesses By Employee Size<br /><table><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesByEmployeeSize_1_010.png" /></td><td>0 - 1</td></tr><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesByEmployeeSize_1_121.png" /></td><td>1 - 2</td></tr><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesByEmployeeSize_1_242.png" /></td><td>2 - 4</td></tr><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesByEmployeeSize_1_4103.png" /></td><td>4 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesByEmployeeSize_1_1014004.png" /></td><td>10 - 1400</td></tr></table>': layer_CaliforniaBusinessesByEmployeeSize_1,'<img src="legend/USStateBoundaries_0.png" /> US State Boundaries': layer_USStateBoundaries_0,}).addTo(map);
+        L.control.layers(baseMaps,{'California Businesses By Employee Size<br /><table><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesByEmployeeSize_1_010.png" /></td><td>0 - 1</td></tr><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesByEmployeeSize_1_121.png" /></td><td>1 - 2</td></tr><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesByEmployeeSize_1_242.png" /></td><td>2 - 4</td></tr><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesByEmployeeSize_1_4103.png" /></td><td>4 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/CaliforniaBusinessesByEmployeeSize_1_1014004.png" /></td><td>10 - 1400</td></tr></table>': layer_CaliforniaBusinessesByEmployeeSize_1,'<img src="legend/California_0.png" /> California': layer_California_0,}).addTo(map);
         setBounds();
         var mapDiv = document.getElementById('map');
         var row = document.createElement('div');
